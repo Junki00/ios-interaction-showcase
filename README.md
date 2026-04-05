@@ -1,6 +1,6 @@
-# ponda — Selected Code Showcase
+# iOS Interaction Showcase
 
-Code excerpts from **ponda**, a hydration-tracking iOS app built with SwiftUI.
+Code excerpts from **[Hydro Paint](https://apps.apple.com/app/hydro-paint-water-tracker/id6761187262)**, a hydration-tracking iOS app built with SwiftUI.
 These files highlight interaction design, design-system architecture, and Metal shader work.
 
 > The full app is not open-source. This repository contains curated standalone snippets
