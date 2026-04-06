@@ -7,9 +7,15 @@ These files highlight interaction design, design-system architecture, and Metal 
 > for reference and portfolio purposes. Some files depend on app-specific types
 > (`PondaViewModel`, `PondaItem`, etc.) and are not independently compilable.
 
-## Demo
 
-[![Watch Demo](https://img.youtube.com/vi/wUlWzYwC7Es/0.jpg)](https://www.youtube.com/watch?v=wUlWzYwC7Es)
+## Demo: Click the gif to watch the full demo on YouTube.
+
+<p>
+  <a href="https://www.youtube.com/watch?v=wUlWzYwC7Es">
+    <img src="https://github.com/user-attachments/assets/09566957-b72c-4718-9857-2e0b9da8874e" alt="Hydro Paint Demo" width="280">
+  </a>
+</p>
+
 
 ## Contents
 
