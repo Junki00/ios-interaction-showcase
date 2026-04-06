@@ -7,6 +7,10 @@ These files highlight interaction design, design-system architecture, and Metal 
 > for reference and portfolio purposes. Some files depend on app-specific types
 > (`PondaViewModel`, `PondaItem`, etc.) and are not independently compilable.
 
+## Demo
+
+[![Watch Demo](https://img.youtube.com/vi/wUlWzYwC7Es/0.jpg)](https://www.youtube.com/watch?v=wUlWzYwC7Es)
+
 ## Contents
 
 ### [`DesignSystem/`](./DesignSystem)
