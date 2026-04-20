@@ -26,9 +26,9 @@ Three product and engineering tradeoffs behind the current V1.
 
 ### 1. Shipping V1: food tracker → water tracker
 
-**Problem.** The original concept was a full food tracker with a pantry view, CRUD meal logging, and a data dashboard. Too much surface area for a solo V1.
+**Problem.** The original concept was a full food tracker with a pantry view, CRUD meal logging, and a data dashboard. The priority wasn't in generic CRUD screens — too many apps already offer that.
 
-**Decision.** Cut food logging entirely. Keep only the core loop that no other app has: drink water → reveal ukiyo-e layers. This let me spend time on interaction quality (radial menu, Metal shaders, haptic mapping) instead of generic CRUD screens.
+**Decision.** Cut food logging entirely. Keep only the core loop that no other app has: drink water → reveal ukiyo-e layers. This let me spend time on interaction quality (radial menu, Metal shaders, haptic mapping) and forming the product's core logic chain, with plans to expand into food tracking in the future.
 
 **Why.** A food tracker with average interactions ships into a crowded market and says nothing. A water tracker with a unique visual and gestural identity is a smaller product but a stronger portfolio piece — and a better foundation to expand from.
 
@@ -90,7 +90,7 @@ Gesture flow:
 Key implementation details:
 - State machine: `idle → pressing → open → adjusting(slot)`
 - Proximity factor uses `sin(π/2 · t)` ease-out, not linear interpolation
-- Two independent `TimelineView`-driven Metal ripple layers (open + lock) with mutual suppression
+- Metal shader ripple on both open and lock events, synced with haptic feedback
 - Full `accessibilityLabel` / `accessibilityHidden` coverage
 
 ### [`Shaders/`](./Shaders)
@@ -104,7 +104,7 @@ Metal shaders for the ripple distortion effect, presented as a learning progress
 | `rippleStep4` | Distance-based energy decay |
 | `rippleStep5` | Multiple concentric wavefronts |
 | `rippleStep6` | Production guards (NaN safety, elapsed bounds) |
-| **`rippleColorBurst`** | Final production shader — chromatic dispersion, spring ease-out, accent-color glow |
+| **`rippleColorBurst`** | Production shader used in the radial menu |
 
 `rippleColorBurst` is used as a SwiftUI `.layerEffect` and fires on both menu open and satellite lock events.
 
